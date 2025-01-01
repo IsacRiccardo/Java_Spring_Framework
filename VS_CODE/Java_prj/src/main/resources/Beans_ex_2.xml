@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable component scanning -->
+    <context:component-scan base-package="com.example.Exercise_2"/>
+
+    <!-- Define AutoVehicle 1 (constructor injection)-->
+    <bean id="autoVehicle1" class="com.example.Exercise_2.AutoVehicle">
+        <constructor-arg value="25000.0"/>
+        <constructor-arg value="180"/>
+        <constructor-arg value="Toyota"/>
+        <constructor-arg value="2020"/>
+    </bean>
+
+    <!-- Define AutoVehicle 2 (constructor injection)-->
+    <bean id="autoVehicle2" class="com.example.Exercise_2.AutoVehicle">
+        <constructor-arg value="30000.0"/>
+        <constructor-arg value="200"/>
+        <constructor-arg value="Honda"/>
+        <constructor-arg value="2022"/>
+    </bean>
+
+    <!-- Define Truck (setter injection)-->
+    <bean id="truck" class="com.example.Exercise_2.Truck">
+        <constructor-arg value="40000.0"/>
+        <constructor-arg value="120"/>
+        <constructor-arg value="10000"/>
+    </bean>
+
+</beans>
