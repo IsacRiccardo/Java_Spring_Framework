@@ -14,8 +14,8 @@ public class MainApp {
         Vehicle truck = (Vehicle) context.getBean("truck");
 
         // Fetch annotated bean for Motorcycle
-        Motorcycle motorcycle1 = context.getBean(Motorcycle.class);
-        Motorcycle motorcycle2 = context.getBean(Motorcycle.class);
+        Vehicle motorcycle1 = (Vehicle) context.getBean("motorcycle");
+        Vehicle motorcycle2 = (Vehicle) context.getBean("motorcycle");
 
         // Display all vehicles
         System.out.println("AutoVehicle 1: " + autoVehicle1);
